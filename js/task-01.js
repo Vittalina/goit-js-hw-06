@@ -16,8 +16,14 @@ console.log(`Number of categories: ${ulCategories.length}`);
 // const liItemTitle = document.querySelector("h2");
 // console.log(`Category: ${liItemTitle.textContent}`);
 
-for (const item of ulCategories) {
+ulCategories.forEach(function (item) {
     console.log(`Category: ${item.firstElementChild.textContent}`);
     const liItems = item.querySelectorAll("li");
     console.log(`Elements: ${liItems.length}`);
-}
+});
+
+// for (const item of ulCategories) {
+//     console.log(`Category: ${item.firstElementChild.textContent}`);
+//     const liItems = item.querySelectorAll("li");
+//     console.log(`Elements: ${liItems.length}`);
+// }

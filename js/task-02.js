@@ -16,13 +16,22 @@ const ingredients = [
 // ulIngredients.appendChild(listEl);
 
 const ulIngredients = [];
-for (const el of ingredients) {
-    const listEl = document.createElement("li");
-    listEl.classList.add("item");
-    listEl.textContent = el;
-    ulIngredients.push(listEl);
-    console.log(ulIngredients);
-  }
+console.log(ulIngredients);
+
+ingredients.forEach(function (ingredient) {
+  const listEl = document.createElement("li");
+      listEl.classList.add("item");
+      listEl.textContent = ingredient;
+      ulIngredients.push(listEl);
+      console.log(ulIngredients);
+});
+// for (const el of ingredients) {
+//     const listEl = document.createElement("li");
+//     listEl.classList.add("item");
+//     listEl.textContent = el;
+//     ulIngredients.push(listEl);
+//     console.log(ulIngredients);
+//   }
 
   const ulList = document.querySelector("#ingredients");
   ulList.append(...ulIngredients);

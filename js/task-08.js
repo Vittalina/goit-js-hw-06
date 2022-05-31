@@ -14,9 +14,11 @@ function onSubmitForm(event) {
 
     if (email.value === "" || password.value === "") {
         alert("All fields must be filled!");
+        
     } else {
         email.value = emailEl;
         password.value = passwordEl;
     }
-    document.querySelector(".login-form").reset();
+    console.log(`Email: ${email.value}, Password: ${password.value}`);
+    event.currentTarget.reset();
 }
